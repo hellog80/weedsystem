@@ -1,0 +1,101 @@
+Weed System Project Documentation
+Overview
+The Weed System project is a PHP-based application designed to manage and track the growth, cultivation, and inventory of cannabis plants. This system helps farmers, growers, and cannabis businesses to streamline operations and improve efficiency in managing their plants. It tracks the plant’s lifecycle, records environmental conditions, and monitors the entire cultivation process, from seedling to harvest. The system also integrates with inventory management, ensuring that all harvested products are logged and accounted for.
+
+This document provides a brief overview of the key components and features of the project, as well as instructions on how to install and use the system.
+
+Features
+The Weed System project offers the following core features:
+
+Plant Lifecycle Management:
+
+Track individual plants from the seedling stage to full growth and harvest.
+Record important details like strain type, growth phase, and environmental conditions (light, humidity, temperature).
+Environment Monitoring:
+
+Input and monitor environmental data to optimize plant health.
+Log temperature, humidity, and other key variables during plant growth.
+Inventory Tracking:
+
+Manage harvested cannabis products and store them in the system's inventory module.
+Track product quantities and handle sales or distribution records.
+Grow Schedule Management:
+
+Schedule and track important events like watering, fertilization, pruning, and pest control.
+Set reminders and alerts for tasks required during the growth process.
+User Management:
+
+Multiple user roles and permissions (e.g., Admin, Grower, Inventory Manager).
+Secure login and user authentication to ensure access is limited to authorized personnel.
+Reporting and Analytics:
+
+Generate reports on plant growth, harvest yields, and inventory.
+Analyze environmental conditions to determine the best growing practices.
+Installation
+To set up the Weed System on your local machine or server, follow these steps:
+
+Clone the repository: Clone the repository from GitHub using the following command:
+
+bash
+Copy code
+git clone https://github.com/yourusername/weed-system.git
+Install Dependencies: Navigate to the project directory and use Composer to install the necessary PHP dependencies:
+
+bash
+Copy code
+cd weed-system
+composer install
+Database Setup:
+
+Create a MySQL database for the system.
+Import the weed_system.sql file located in the /database directory to set up the necessary tables.
+Update the database credentials in the .env file.
+Environment Configuration: Copy the .env.example file to .env and set the necessary environment variables, including database credentials, app URL, and any API keys.
+
+bash
+Copy code
+cp .env.example .env
+Run Migrations and Seeders: Run the database migrations and seeders to populate the database with initial data.
+
+css
+Copy code
+php artisan migrate --seed
+Start the Server: Start the local development server using PHP's built-in server:
+
+arduino
+Copy code
+php -S localhost:8000 -t public
+Access the Application: Open your browser and navigate to http://localhost:8000 to access the system.
+
+Usage
+Once the system is installed, users can log in to the dashboard using their credentials. Admins can create user accounts and assign roles. Growers can track plants by entering growth data, environmental conditions, and scheduling important tasks. The inventory manager will be able to monitor harvest quantities, process sales, and manage distribution.
+
+Key Pages:
+
+Dashboard: Provides an overview of the current plant statuses, tasks, and recent activities.
+Plants: A section to view all plants, add new ones, and manage existing plants.
+Grow Schedule: A calendar for managing tasks such as watering, fertilizing, and pruning.
+Inventory: Displays all harvested cannabis products and their current quantities.
+Reports: Generate growth and inventory reports based on specific timeframes.
+Contributing
+Contributions to the Weed System project are welcome! To contribute:
+
+Fork the repository.
+Create a new branch for your feature or bug fix:
+css
+Copy code
+git checkout -b feature-branch-name
+Commit your changes:
+sql
+Copy code
+git commit -m "Add new feature or fix description"
+Push the branch:
+perl
+Copy code
+git push origin feature-branch-name
+Create a pull request on GitHub, and the project maintainers will review your contribution.
+License
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+Conclusion
+The Weed System provides a comprehensive solution for managing cannabis cultivation from seed to sale. With its rich feature set and user-friendly interface, it simplifies the process of tracking plant growth, managing inventory, and optimizing environmental conditions for maximum yield.
